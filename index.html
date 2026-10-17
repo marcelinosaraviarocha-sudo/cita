@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>¿Quieres salir conmigo?</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="bg"></div>
+<main class="card">
+  <section id="paso0" class="screen active">
+    <div class="meme">🐻<span>Tengo una pregunta<br><small>Advertencia:<br>Puede causar sonrisas 😌<br>Un poquito de nervios 🙈<br>Y quizá una linda cita 💕</small></span></div>
+    <p class="mini">TENGO UNA SORPRESITA PARA TI 💗</p>
+    <p class="tag">PREGUNTA IMPORTANTE</p>
+    <h1>¿Quieres salir conmigo?</h1>
+    <p>Piénsalo bien... aunque, sinceramente, ya lo tengo todo planeado.</p>
+    <div class="actions">
+      <button class="primary" onclick="ir(1)">Sí, obvio 💗</button>
+      <button id="no">No</button>
+    </div>
+  </section>
+
+  <section id="paso1" class="screen">
+    <div class="pics"><div>💐<br><small>Sorpresa</small></div><div>🐹🌹<br><small>para ti</small></div></div>
+    <p class="mini">ELIGE BIEN O ME PONGO EXIGENTE 😼</p>
+    <p class="tag">PASO 1 DE 2</p>
+    <h1>Elige el día</h1>
+    <p>Escoge la fecha que más te acomode.</p>
+    <input id="fecha" type="date">
+    <button class="primary" onclick="siguiente()">Siguiente</button>
+  </section>
+
+  <section id="paso2" class="screen">
+    <div class="pics"><div>🍕</div><div>🍦</div><div>🎬</div></div>
+    <p class="tag">PASO 2 DE 2</p>
+    <h1>¿Qué plan prefieres?</h1>
+    <p>Elige uno para nuestra cita.</p>
+    <div class="plans">
+      <button onclick="confirmar('Pizza y paseo 🍕')">Pizza y paseo 🍕</button>
+      <button onclick="confirmar('Helado y charla 🍦')">Helado y charla 🍦</button>
+      <button onclick="confirmar('Película juntos 🎬')">Película juntos 🎬</button>
+    </div>
+  </section>
+
+  <section id="paso3" class="screen">
+    <p class="tag">CONFIRMADO</p>
+    <h1>Cita agendada 💖</h1>
+    <div class="line"></div>
+    <h2>Pasó por ti en un patín 🛼</h2>
+    <div class="summary">
+      <p id="resFecha"></p>
+      <p id="resPlan"></p>
+    </div>
+    <p class="final">Ahora sí... ya no hay escapatoria 😌💕</p>
+    <button class="primary" onclick="enviarWhatsApp()">Enviar mi respuesta 💕</button>
+    <button onclick="reiniciar()">Volver a empezar</button>
+  </section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
